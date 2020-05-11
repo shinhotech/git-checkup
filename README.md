@@ -30,9 +30,10 @@ Git 规范检测工具
 
 关于user
 - [ ] user账号信息检测，异常提醒
- 
 
 ## configuration
+
+在[config.yaml](config.yaml)中设置：
 
 - 需要检测的项目列表
 - 项目迭代开始结束时间的数组
@@ -40,5 +41,26 @@ Git 规范检测工具
 - 分支、tag、提交信息等规范的正则
 - ...
 
+## 目录
+
+```bash
+lib         # 验证逻辑封装
+schedule    # 定时任务
+main.js     # 入口文件
+config.yaml # 配置文件
+```
+
+## start up
+
+开发
+```
+npm run dev
+```
+
+PM2 部署
+```
+npm run build
+npm start/restart
+```
 
 *参考文档：[gitlab api](http://10.211.62.41:8081/help/api/README.md)*
