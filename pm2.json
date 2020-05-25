@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "git-pm2",
+      "script": "main.ts",
+      "exec_interpreter": "bash",
+      "watch": [
+        "main.ts"
+      ],
+      "exec_mode": "cluster_mode"
+    }
+  ]
+}

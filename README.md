@@ -2,6 +2,16 @@
 
 Git 规范检测工具
 
+## 起服务方式
+npm install pm2 -g
+npm install ts-node -g
+pm2 install typescript
+
+
+nodemon : npm run start
+pm2: npm run pm2
+
+
 ## 一期需要完成的任务
 - config.yaml配置的设计和读取
 - ts编译配置
