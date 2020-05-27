@@ -43,13 +43,16 @@ export class Schedule {
           return !regexTag(name)
         })
         console.log('errorTag', errorTag)
-        // 短信
-        console.log(`【Git规范检测工具】项目名称:${o.subtitle},命名不规范分支:${errorBranch.join(',')},命名不规范TAG:${errorTag.join(',')}`)
-        sendSMS(o.ownerPhone,
-          `【Git规范检测工具】项目名称:${o.subtitle}`
-          + (errorBranch.length > 0 ? `,命名不规范分支:${errorBranch.join(',')}` : ``)
-          + (errorTag.length > 0 ? `,命名不规范TAG:${errorTag.join(',')}` : ``)
-          , '欣和食与家')
+
+        if (errorBranch.length > 0 || errorTag.length > 0) {
+          // 短信
+          console.log(`【Git规范检测工具】项目名称:${o.subtitle},命名不规范分支:${errorBranch.join(',')},命名不规范TAG:${errorTag.join(',')}`)
+          sendSMS(o.ownerPhone,
+            `【Git规范检测工具】项目名称:${o.subtitle}`
+            + (errorBranch.length > 0 ? `,命名不规范分支:${errorBranch.join(',')}` : ``)
+            + (errorTag.length > 0 ? `,命名不规范TAG:${errorTag.join(',')}` : ``)
+            , '欣和食与家')
+        }
       })
     })
   }
