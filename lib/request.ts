@@ -19,8 +19,7 @@ export const fetchTags = async function (id: number) {
     method: 'GET',
     url: `/projects/${id}/repository/tags`
   })
-  const tagList = tags.map((item: { name: any }) => item.name)
-  return tagList
+  return tags.map((item: { name: string }) => item.name)
 }
 
 /**
@@ -32,8 +31,7 @@ export const fetchBranches = async function (id: number) {
     method: 'GET',
     url: `/projects/${id}/repository/branches`
   })
-  const branchesList = branches.map((item: { name: any }) => item.name)
-  return branchesList
+  return branches.map((item: { name: string }) => item.name)
 }
 
 /**
@@ -41,7 +39,11 @@ export const fetchBranches = async function (id: number) {
 */
 export const fetchProjects = async function () {
   const { data: projects } = await request('/projects?visibility=private')
-  const items = projects.map((item: { name: any; description: any; id: any }) => {
+  const items = projects.map((item: {
+      name: string,
+      description: string,
+      id: number
+    }) => {
     return {
       name: item.name,
       subtitle: item.description,
