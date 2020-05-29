@@ -4,7 +4,7 @@ baseURL: http://10.211.62.41:8081/api/v4
 #定时任务配置
 #*  *  *  *  *  *
 #┬ ┬ ┬ ┬ ┬ ┬
-#│ │ │ │ │ │ 
+#│ │ │ │ │ │
 #│ │ │ │ │ └ day of week (0 - 7) (0 or 7 is Sun)
 #│ │ │ │ └───── month (1 - 12)
 #│ │ │ └────────── day of month (1 - 31)
@@ -20,27 +20,27 @@ baseURL: http://10.211.62.41:8081/api/v4
 checkSchedule: 30 30 10 * * *
 
 # 检测列表
-checkList: 
+checkList:
   -
     id: 1451
     name: admin-api
     subtitle: 欣和食与家后台管理系统-服务端（食谱）
-    ownerPhone: 18516236270
+    ownerPhone: 13127977661
   -
     id: 1450
     name: wechat-mini-program-api
     subtitle: 欣和食与家微信小程序-服务端（食谱）
-    ownerPhone: 18516236270
+    ownerPhone: 13127977661
   -
     id: 1449
     name: admin-web
     subtitle: 欣和食与家后台管理系统-前端（食谱）
-    ownerPhone: 18516236270
+    ownerPhone: 13127977661
   -
     id: 1448
     name: wechat-mini-program
     subtitle: 欣和食与家微信小程序-前端（食谱）
-    ownerPhone: 18516236270
+    ownerPhone: 13127977661
 
 # 检测正则
 regex:

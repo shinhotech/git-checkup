@@ -3,14 +3,17 @@
 Git 规范检测工具
 
 ## 起服务方式
+
+```bash
 npm install pm2 -g
 npm install ts-node -g
 pm2 install typescript
+```
 
-
+```bash
 nodemon : npm run start
 pm2: npm run pm2
-
+```
 
 ## 一期需要完成的任务
 - config.yaml配置的设计和读取
@@ -26,7 +29,8 @@ pm2: npm run pm2
 
 关于分支
 - [ ] 分支命名规范
-- [ ] 分支合并提醒
+- [ ] 分支向上合并提醒
+- [ ] 限制向下合并的分支（release 合并 feature）预警
 - [ ] 分支自动合并，支持定时
 - [ ] 分支异常推送
 
@@ -38,11 +42,13 @@ pm2: npm run pm2
 
 关于提交
 - [ ] commit meassage检测
+- [ ] 限制提交的分支（master/release）提交检测预警
 - [ ] commit 提醒，每天至少一次
 
 关于代码
 - [ ] 代码注释检测
 - [ ] 代码规范检测
+- [ ] 需冻结文件/文件夹修改预警
 - [ ] 新代码review提醒
 
 关于仓库
